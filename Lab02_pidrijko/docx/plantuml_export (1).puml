@@ -1,0 +1,41 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package ua.khpi.oop.lab02 {
+
+    class Driver {
+        - fullName: String
+        - assignedRoutes: List<Route>
+        + Driver(fullName: String)
+        + addRoute(route: Route): void
+        + toString(): String
+        + equals(obj: Object): boolean
+        + hashCode(): int
+    }
+
+    class Bus {
+        - licensePlate: String
+        - capacity: int
+        + Bus(licensePlate: String, capacity: int)
+        + toString(): String
+    }
+
+    class Route {
+        - routeNumber: String
+        - destination: String
+        - bus: Bus
+        + Route(routeNumber: String, destination: String, bus: Bus)
+        + toString(): String
+    }
+
+    class Main {
+        + {static} main(args: String[]): void
+    }
+
+    ' Зв'язки за новими вимогами
+    Driver "1" o-- "0..*" Route : має список рейсів >
+    Route "1" --> "1" Bus : призначений автобус >
+    Main ..> Driver : створює
+    Main ..> Route : створює
+}
+@enduml
