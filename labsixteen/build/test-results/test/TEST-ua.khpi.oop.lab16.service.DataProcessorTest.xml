@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ua.khpi.oop.lab16.service.DataProcessorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-05-31T09:39:39" hostname="DESKTOP-MQ76IU3" time="0.024">
+  <properties/>
+  <testcase name="testJavaAndNativeResultsAreEqual()" classname="ua.khpi.oop.lab16.service.DataProcessorTest" time="0.023"/>
+  <testcase name="testBoundaryEmptyCase()" classname="ua.khpi.oop.lab16.service.DataProcessorTest" time="0.0"/>
+  <system-out><![CDATA[Локальна перевірка Native-компонента пропущена (немає .dll). Еталонний результат Java: 30.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
