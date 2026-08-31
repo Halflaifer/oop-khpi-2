@@ -1,0 +1,43 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class MenuItem {
+  - String name
+  - double price
+  + MenuItem(name: String, price: double)
+  + getName(): String
+  + getPrice(): double
+  + description(): String
+}
+
+class Beverage {
+  - int volumeMl
+  + Beverage(name: String, price: double, volumeMl: int)
+  + getVolumeMl(): int
+  + description(): String
+}
+
+class Coffee {
+  - String roastLevel
+  + Coffee(name: String, price: double, volumeMl: int, roast: String)
+  + getRoastLevel(): String
+  + description(): String
+}
+
+class SpecialtyCoffee <<final>> {
+  - String originRegion
+  + SpecialtyCoffee(name: String, price: double, volumeMl: int, roast: String, region: String)
+  + getOriginRegion(): String
+  + description(): String
+}
+
+MenuItem <|-- Beverage
+Beverage <|-- Coffee
+Coffee <|-- SpecialtyCoffee
+
+note right of SpecialtyCoffee
+  Кінцевий клас ієрархії
+  модифікатор final
+end note
+
+@enduml
